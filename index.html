@@ -283,6 +283,40 @@ textarea{min-height:90px;resize:vertical}
   .tab{font-size:12px;padding:6px 9px}
 }
 
+
+
+/* =========================
+   Brand History section
+   ========================= */
+.brand-history{margin:1.6rem 0 1.9rem}
+.brand-history-head{margin-bottom:1rem}
+.brand-eyebrow{font-family:'Bebas Neue',sans-serif;font-size:0.95rem;letter-spacing:2px;color:var(--blue);margin-bottom:0.25rem}
+.brand-title{font-size:1.12rem;font-weight:500;margin-bottom:0.35rem}
+.brand-desc{font-size:0.86rem;color:var(--text2);line-height:1.75;word-break:keep-all;overflow-wrap:anywhere}
+.brand-collage{position:relative;height:640px;margin-top:1.2rem}
+.brand-shot{position:absolute;background:var(--bg);border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 18px 42px rgba(0,0,0,0.22);transition:transform 0.22s ease,box-shadow 0.22s ease}
+.brand-shot img{width:100%;height:auto;display:block}
+.brand-shot:hover{box-shadow:0 24px 56px rgba(0,0,0,0.28)}
+.brand-shot:nth-child(1){width:43%;left:1%;top:3%;transform:rotate(-3.5deg);z-index:1}
+.brand-shot:nth-child(2){width:42%;right:1%;top:12%;transform:rotate(3deg);z-index:2}
+.brand-shot:nth-child(3){width:46%;left:27%;top:31%;transform:rotate(-1.4deg);z-index:3}
+.brand-shot:nth-child(1):hover{transform:rotate(-2deg) translateY(-4px)}
+.brand-shot:nth-child(2):hover{transform:rotate(1.5deg) translateY(-4px)}
+.brand-shot:nth-child(3):hover{transform:rotate(-0.5deg) translateY(-4px)}
+@media (max-width:768px){
+  .brand-history{margin:1.35rem 0 1.55rem}
+  .brand-title{font-size:1.05rem}
+  .brand-desc{font-size:0.84rem}
+  .brand-collage{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;height:auto;margin-top:0.85rem}
+  .brand-shot,.brand-shot:nth-child(1),.brand-shot:nth-child(2),.brand-shot:nth-child(3){position:relative;left:auto;right:auto;top:auto;width:100%;transform:none;border-radius:14px}
+  .brand-shot:nth-child(3){grid-column:1 / -1;width:74%;justify-self:center}
+  .brand-shot:hover,.brand-shot:nth-child(1):hover,.brand-shot:nth-child(2):hover,.brand-shot:nth-child(3):hover{transform:translateY(-3px)}
+}
+@media (max-width:380px){
+  .brand-collage{grid-template-columns:1fr}
+  .brand-shot:nth-child(3){grid-column:auto;width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -372,6 +406,21 @@ Teamlesson의 수업은 수학을 기초부터 다시 세워야 하는 학생들
 그것이 Teamlesson이 지향하는 수학 수업입니다.
   </div>
 </div>
+  
+
+
+  <div class="brand-history">
+    <div class="brand-history-head">
+      <div class="brand-eyebrow">Brand History</div>
+      <div class="brand-title">노베이스 수업에서 시작된 Teamlesson의 기록</div>
+      <div class="brand-desc">최근 4개월간의 수업 기록, 현장 보완, 자체교재 제작 과정을 하나의 흐름으로 정리했습니다.</div>
+    </div>
+    <div class="brand-collage" aria-label="Teamlesson Brand History 이미지">
+      <div class="brand-shot"><img src="2.png" alt="Teamlesson Brand History 1"></div>
+      <div class="brand-shot"><img src="3.png" alt="Teamlesson Brand History 2"></div>
+      <div class="brand-shot"><img src="4.png" alt="Teamlesson Brand History 3"></div>
+    </div>
+  </div>
   
   <hr class="divider">
   <div class="sec-title" style="margin-bottom:1rem">튜터</div>
